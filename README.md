@@ -17,18 +17,18 @@ In order to start use this module, copy the *modules/powerdns/classes/config/pow
 ### Instantiate Class
 
 <code>
-&lt;?php defined('SYSPATH') or die('No direct script access.');
-class Controller_Welcome extends Controller {
-	public function action_index()
-	{
-		// Dynamic Way with overloading API key
-		$powerdns = new Kohana_PowerDNS("00000000-0000-0000-0000-000000000000");
-		$zones = $powerdns->listZones();
-	
-		// Static Way
-		$zones = PowerDNS::factory()->listZones();
-	}
-}
+&lt;?php defined('SYSPATH') or die('No direct script access.');  
+class Controller_Welcome extends Controller {  
+	public function action_index()  
+	{  
+		// Dynamic Way with overloading API key  
+		$powerdns = new Kohana_PowerDNS("00000000-0000-0000-0000-000000000000");  
+		$zones = $powerdns->listZones();  
+	  
+		// Static Way  
+		$zones = PowerDNS::factory()->listZones();  
+	}  
+}  
 </code>
 ### Available methods
 
