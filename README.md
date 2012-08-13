@@ -8,9 +8,23 @@ To use this module **you need to obtain an API key.**
 For more information, please visit: [http://www.powerdns.net]  
 PowerDNS API 2.3 documentation: [PowerDNS Express API 2.3]  
 
+## Let's Start!
+
+### Enable Module
+
+To use Kohana PowerDNS module:
+
+1. Download and extract the code from [GitHub]
+2. Place the extracted code into your Kohana <code>application/modules/powerdns</code> directory
+3. Enable the module within your application bootstrap, within the section entitled modules
+
+Go to <code>application/bootstrap.php</code>, look for <code>Kohana::modules()</code> and append the following line to array:
+
+<code>'powerdns'   => MODPATH.'powerdns',	 // PowerDNS</code>
+
 ### Configuration
 
-In order to start use this module, copy the *modules/powerdns/classes/config/powerdns.php* configuration file to under *application/config/* directory and set a valid and working API key.
+Before you start to use this module, copy the <code>modules/powerdns/classes/config/powerdns.php</code> configuration file to under <code>application/config/</code> directory and set a valid and working API key.
 
 > NOTE: In both following instantiate cases you can use the overload method to dynamically set the API key or the API URL. See example.
 
@@ -18,6 +32,7 @@ In order to start use this module, copy the *modules/powerdns/classes/config/pow
 
 <pre><code>
 &lt;?php defined('SYSPATH') or die('No direct script access.');  
+
 class Controller_Welcome extends Controller {  
 	public function action_index()  
 	{  
@@ -75,3 +90,4 @@ class Controller_Welcome extends Controller {
 
   [http://www.powerdns.net]: http://www.powerdns.net
   [PowerDNS Express API 2.3]: https://www.powerdns.net/inc/pdf/PowerDNS%20Express%20API%202.3.pdf
+  [GitHub]: https://github.com/southern-hu/kohana-powerdns
