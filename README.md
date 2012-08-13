@@ -16,7 +16,7 @@ In order to start use this module, copy the *modules/powerdns/classes/config/pow
 
 ### Instantiate Class
 
-<code>
+<pre><code>
 &lt;?php defined('SYSPATH') or die('No direct script access.');  
 class Controller_Welcome extends Controller {  
 	public function action_index()  
@@ -29,7 +29,7 @@ class Controller_Welcome extends Controller {
 		$zones = PowerDNS::factory()->listZones();  
 	}  
 }  
-</code>
+</code></pre>
 ### Available methods
 
   - **Add Native Domain**
