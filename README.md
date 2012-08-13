@@ -3,10 +3,10 @@ kohana-powerdns
 
 ## Kohana - PowerDNS Express API 2.3
 
-PowerDNS API 2.3 library for Kohana 3.2 Framework. This module helps to manage domains and records hosted by PowerDNS Hosting solution. The modules has not been tested with earlier versions, but it may work with 3.0 and 3.1 versions. Will port for request.</br></br>
-To use this module **you need to obtain an API key.**</br>
-For more information, please visit: [http://www.powerdns.net]</br>
-PowerDNS API 2.3 documentation: [PowerDNS Express API 2.3] 
+PowerDNS API 2.3 library for Kohana 3.2 Framework. This module helps to manage domains and records hosted by PowerDNS Hosting solution. The modules has not been tested with earlier versions, but it may work with 3.0 and 3.1 versions. Will port for request.  
+To use this module **you need to obtain an API key.**  
+For more information, please visit: [http://www.powerdns.net]  
+PowerDNS API 2.3 documentation: [PowerDNS Express API 2.3]  
 
 ### Configuration
 
@@ -17,10 +17,8 @@ In order to start use this module, copy the *modules/powerdns/classes/config/pow
 ### Instantiate Class
 
 <code>
-<?php defined(\'SYSPATH\') or die(\'No direct script access.\');
-
+&lt;?php defined('SYSPATH') or die('No direct script access.');
 class Controller_Welcome extends Controller {
-
 	public function action_index()
 	{
 		// Dynamic Way with overloading API key
@@ -30,7 +28,6 @@ class Controller_Welcome extends Controller {
 		// Static Way
 		$zones = PowerDNS::factory()->listZones();
 	}
-
 }
 </code>
 ### Available methods
@@ -72,7 +69,7 @@ class Controller_Welcome extends Controller {
 <code>$response = PowerDNS::factory()->deleteZoneByName("example.com");</code>
 
   - **Update Record**
-  
+
 <code>$response = PowerDNS::factory()->updateRecord(123456, "subdomain.example.com", "A", "192.168.0.1", 7200);</code>
 
 
