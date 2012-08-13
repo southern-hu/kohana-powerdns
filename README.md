@@ -10,14 +10,14 @@ PowerDNS API 2.3 documentation: [PowerDNS Express API 2.3]
 
 ### Configuration
 
-> In order to start use this module, copy the *modules/powerdns/classes/config/powerdns.php* configuration file to under *application/config/* directory and set a valid and working API key.
+In order to start use this module, copy the *modules/powerdns/classes/config/powerdns.php* configuration file to under *application/config/* directory and set a valid and working API key.
 
 > NOTE: In both following instantiate cases you can use the overload method to dynamically set the API key or the API URL. See example.
 
 ### Instantiate Class
 
-<pre><code>
-<?php defined('SYSPATH') or die('No direct script access.');
+<code>
+<?php defined(\'SYSPATH\') or die(\'No direct script access.\');
 
 class Controller_Welcome extends Controller {
 
@@ -32,39 +32,48 @@ class Controller_Welcome extends Controller {
 	}
 
 }
-</code></pre>
-
+</code>
 ### Available methods
 
   - **Add Native Domain**
-<code><pre>$response = PowerDNS::factory()->addNativeDomain("example.com");</code></pre>
+  
+<code>$response = PowerDNS::factory()->addNativeDomain("example.com");</code>
 
   - **Add Record to Zone**
-<code><pre>$response = PowerDNS::factory()->addRecordToZone(123456, "example.com", "mail.example.com", "MX", "127.0.0.1", "3600", 10);</code></pre>
+  
+<code>$response = PowerDNS::factory()->addRecordToZone(123456, "example.com", "mail.example.com", "MX", "127.0.0.1", "3600", 10);</code>
 
   - **List Zones**
-<code><pre>$response = PowerDNS::factory()->listZones();</code></pre>
+  
+<code>$response = PowerDNS::factory()->listZones();</code>
 
   - **List Records**
-<code><pre>$response = PowerDNS::factory()->listRecords(123456);</code></pre>
+  
+<code>$response = PowerDNS::factory()->listRecords(123456);</code>
 
   - **List Records by type**
-<code><pre>$response = PowerDNS::factory()->listRecordsByType(123456, "MX");</code></pre>
+  
+<code>$response = PowerDNS::factory()->listRecordsByType(123456, "MX");</code>
 
   - **Delete All Records for Domain**
-<code><pre>$response = PowerDNS::factory()->deleteAllRecordsForDomain(123456);</code></pre>
+  
+<code>$response = PowerDNS::factory()->deleteAllRecordsForDomain(123456);</code>
 
   - **Delete Record by Id**
-<code><pre>$response = PowerDNS::factory()->deleteRecordById(4567890);</code></pre>
+  
+<code>$response = PowerDNS::factory()->deleteRecordById(4567890);</code>
 
   - **Delete Zone by Id**
-<code><pre>$response = PowerDNS::factory()->deleteZoneById(123456);</code></pre>
+  
+<code>$response = PowerDNS::factory()->deleteZoneById(123456);</code>
 
   - **Delete Zone by Name**
-<code><pre>$response = PowerDNS::factory()->deleteZoneByName("example.com");</code></pre>
+  
+<code>$response = PowerDNS::factory()->deleteZoneByName("example.com");</code>
 
   - **Update Record**
-<code><pre>$response = PowerDNS::factory()->updateRecord(123456, "subdomain.example.com", "A", "192.168.0.1", 7200);</code></pre>
+  
+<code>$response = PowerDNS::factory()->updateRecord(123456, "subdomain.example.com", "A", "192.168.0.1", 7200);</code>
 
 
   [http://www.powerdns.net]: http://www.powerdns.net
